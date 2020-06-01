@@ -61,4 +61,9 @@ There is `SAMLCallback`, the `SAMLIssuer` functionality has been moved to the `S
 
 See config: https://ws.apache.org/wss4j/config.html
 
-
+Private Key
+openssl pkcs12 -in client.p12 -nocerts -nodes > client.key
+Public Certificate
+openssl pkcs12 -in client.p12 -clcerts -nokeys > client.cer
+CA Certificate
+openssl pkcs12 -in client.p12 -cacerts -nokeys -chain > client-ca.cer
